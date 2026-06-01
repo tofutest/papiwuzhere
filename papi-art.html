@@ -71,6 +71,85 @@
 
     .nav-link:hover { opacity: 1; }
 
+    .buy-button {
+      display: inline-block;
+      margin: 1rem 0 1.5rem;
+      background: #c0782a;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.85rem 1.4rem;
+      font-weight: bold;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.16);
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .buy-button:hover {
+      transform: translateY(-2px);
+      background: #a35a19;
+    }
+
+    .purchase-form {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 700px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      border-left: 6px solid #c0782a;
+    }
+
+    .purchase-form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #4a2c0a;
+    }
+
+    .purchase-form input,
+    .purchase-form select,
+    .purchase-form textarea {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #d4b27a;
+      padding: 0.85rem 1rem;
+      margin-top: 0.4rem;
+      font-size: 0.98rem;
+      background: #fffdf8;
+      color: #3b2a1a;
+    }
+
+    .purchase-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .purchase-form button {
+      margin-top: 1.4rem;
+      background: #c0782a;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 0.95rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .purchase-form button:hover {
+      background: #a35a19;
+    }
+
+    .order-note {
+      margin-top: 1.2rem;
+      font-size: 0.92rem;
+      color: #7a5c30;
+      background: #fef9ee;
+      border-left: 4px solid #e0c070;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+    }
+
     .paw-divider {
       text-align: center;
       font-size: 1.4rem;
@@ -195,9 +274,9 @@
 <header>
   <img src="PapiHeader.png" alt="Papi art gallery" class="hero-bg">
   <div class="hero-content">
-    <img src="Logo2.png" alt="Papi" style="height:110px; width:110px; object-fit:cover; border-radius:50%; border:4px solid #c0782a; box-shadow:0 4px 20px rgba(0,0,0,0.5); margin-bottom:0.8rem;">
+    <img src="davinciPapi.jpg" alt="Papi" style="height:110px; width:110px; object-fit:cover; border-radius:50%; border:4px solid #c0782a; box-shadow:0 4px 20px rgba(0,0,0,0.5); margin-bottom:0.8rem;">
     <h1>Papi Art</h1>
-    <p class="tagline">A curated collection of original works in liquid medium on found surfaces</p>
+    <p class="tagline">A curated collection of original works and pieces heavily inspired by other artists who hopefully never visit this website.</p>
     <a href="index.html" class="nav-link">← Field Journal</a>
   </div>
 </header>
@@ -214,7 +293,7 @@
       Critics have called my work "territorial." I prefer the term <em>site-responsive</em>. I am not marking objects. I am in dialogue with them. The rosemary bush speaks first. I answer. That is art.
     </p>
     <p style="margin-top:1rem;">
-      I have no studio. The world is my studio. Also sometimes the rug, but that was a different period and we don't discuss it.
+      The world is my studio, but here I bring you selected works from Papi's Atelier.
     </p>
     <p style="margin-top:1rem; font-size:0.88rem; color:#aaa; font-style:normal;">— Papi. Ballard.</p>
   </div>
@@ -225,17 +304,50 @@
     <h2>La Gioconda (After da Vinci)</h2>
     <div class="meta">Mixed media on canvas · Ballard · Spring 2026</div>
     <img src="monalisa.png" alt="Papi's interpretation of the Mona Lisa">
+    <div style="text-align:center;">
+      <a href="purchase.html" class="buy-button">Buy Print</a>
+    </div>
     <p>
-      She smiled at me. I am certain of it. There is a quality to that expression — knowing, patient, slightly smug — that I recognized immediately as a fellow creature who has gotten away with something. We understood each other at once.
-    </p>
-    <p>
-      I approached the canvas with the gravity this subject deserved. My contribution is subtle but transformative: a warmth applied to the lower-left corner that da Vinci, working in the early sixteenth century, simply could not have anticipated. I have completed the painting. You're welcome, Leonardo.
-    </p>
-    <blockquote>"She still smiles. If anything, more so." — Papi</blockquote>
+ She smiled at me. I am certain of it. There is a quality to that expression — knowing, patient, slightly smug — that I recognized immediately as a fellow creature who has gotten away with something. We understood each other at once.
+
+I was fully aware that this was not an original composition. Leonardo had arrived first by several centuries, and I made no attempt to conceal the influence. Great artists borrow. Great dogs copy directly.
+
+I approached the canvas with the gravity this subject deserved. My contribution is subtle but transformative warmth.  I do not claim authorship. I claim improvement.
+
+You're welcome, Leonardo.   </p>
+     <blockquote>"She still smiles. If anything, more so." — Papi</blockquote>
     <div class="provenance">
       <strong>Medium:</strong> Liquid on canvas &nbsp;·&nbsp;
       <strong>Duration:</strong> Approximately 4 seconds &nbsp;·&nbsp;
       <strong>Status:</strong> Signed and sealed
+    </div>
+  </div>
+
+  <div class="paw-divider">🎨 🐾 🎨 🐾 🎨</div>
+
+  <!-- Artwork 2 -->
+  <div class="artwork">
+    <div class="badge">🖼️ Masters Series</div>
+    <h2>American Gothic (After Grant Wood)</h2>
+    <div class="meta">Mixed media on hardboard · Ballard · Spring 2026</div>
+    <img src="amgothic.jpg" alt="Papi's interpretation of American Gothic">
+    <div style="text-align:center;">
+      <a href="purchase.html" class="buy-button">Buy Print</a>
+    </div>
+    <p>
+      I studied this painting for some time before I understood what was wrong with it. The composition is fine. The house is adequate. The pitchfork communicates something, though I am not sure what. These are not the problem.
+    </p>
+    <p>
+      The problem is the faces. Both of them — closed, flat, withheld. You look at this painting and you feel nothing has been offered. Nothing has been shared. The farmer and his daughter have mouths and are simply not using them correctly.
+    </p>
+    <p>
+      I corrected this. One small adjustment, freely given, from a place of genuine generosity. The tongue changes everything. It says: I am here. I am present. I have something to say and I am saying it with my whole face. Grant Wood painted duty. I painted joy.
+    </p>
+    <blockquote>"He forgot the tongue. I remembered it." — Papi</blockquote>
+    <div class="provenance">
+      <strong>Medium:</strong> Tongue, sincerely deployed &nbsp;·&nbsp;
+      <strong>Duration:</strong> As long as it took &nbsp;·&nbsp;
+      <strong>Status:</strong> Complete
     </div>
   </div>
 
