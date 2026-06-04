@@ -1,355 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Papi Wuz Heer 🐾</title>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+---
+layout: default
+title: Papi Wuz Heer 🐾
+---
 
-    body {
-      font-size: 18px;
-      font-family: 'Atkinson Hyperlegible', sans-serif;
-      background: #fdf6e3;
-      color: #3b2a1a;
-      min-height: 100vh;
-    }
+<div class="paw-divider">🐾 🐾 🐾 🐾 🐾</div>
 
-    header {
-      position: relative;
-      color: #fdf6e3;
-      text-align: center;
-      border-bottom: 6px solid #c0782a;
-      overflow: hidden;
-    }
+<div class="stats-bar">
+  <div><span>47</span>Total Marks</div>
+  <div><span>12</span>Object Types</div>
+  <div><span>3</span>Neighborhoods</div>
+</div>
 
-    header .hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      filter: brightness(0.55);
-    }
-
-    header .hero-content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem 1rem 1.2rem;
-      gap: 0.4rem;
-    }
-
-    header a {
-      display: inline-block;
-      margin-top: 0.6rem;
-      color: #f5c97a;
-      font-size: 0.9rem;
-      text-decoration: none;
-      border: 1px solid #f5c97a;
-      border-radius: 20px;
-      padding: 0.2rem 0.9rem;
-      opacity: 0.95;
-    }
-
-    @media (max-width: 640px) {
-      header .hero-content {
-        padding: 1.2rem 0.8rem 1rem;
-      }
-
-      header h1 {
-        font-size: 2.4rem;
-      }
-
-      header p.tagline {
-        font-size: 1rem;
-      }
-
-      header a {
-        font-size: 0.85rem;
-        padding: 0.45rem 0.85rem;
-      }
-    }
-
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 0 #c0782a;
-    }
-
-    header p.tagline {
-      margin-top: 0.5rem;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #f5c97a;
-    }
-
-    .paw-divider {
-      text-align: center;
-      font-size: 1.4rem;
-      letter-spacing: 8px;
-      margin: 1.5rem 0;
-      color: #c0782a;
-    }
-
-    main {
-      max-width: 780px;
-      margin: 2.5rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .stats-bar {
-      background: #c0782a;
-      color: white;
-      display: flex;
-      justify-content: space-around;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .stats-bar div span {
-      display: block;
-      font-size: 1.8rem;
-    }
-
-    .post {
-      background: white;
-      border-radius: 14px;
-      padding: 1.8rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      border-left: 6px solid #c0782a;
-      position: relative;
-    }
-
-    .post .badge {
-      display: none;
-    }
-
-    .post h2 {
-      font-size: 1.4rem;
-      color: #4a2c0a;
-      margin-bottom: 0.3rem;
-    }
-
-    .post .meta {
-      font-size: 0.82rem;
-      color: #999;
-      margin-bottom: 1rem;
-    }
-
-    .post p {
-      line-height: 1.7;
-      font-size: 1.07rem;
-    }
-
-    .post .target {
-      display: inline-block;
-      background: #fff3e0;
-      border: 1px solid #e0a050;
-      border-radius: 8px;
-      padding: 0.15rem 0.5rem;
-      font-size: 0.85rem;
-      margin: 0.4rem 0.2rem 0 0;
-      color: #7a3d00;
-    }
-
-    .post .rating {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .post blockquote {
-      margin-top: 1rem;
-      padding: 0.6rem 1rem;
-      background: #fef9ee;
-      border-left: 3px solid #e0c070;
-      font-style: italic;
-      font-size: 0.92rem;
-      color: #7a5c30;
-      border-radius: 0 8px 8px 0;
-    }
-
-    .category-icon { font-size: 1.4rem; margin-right: 0.4rem; }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-      color: #aaa;
-      border-top: 2px solid #e8d5b0;
-      margin-top: 3rem;
-    }
-
-    footer strong { color: #c0782a; }
-  </style>
-</head>
-<body>
-
-<header>
-  <img src="PapiHeader.png" alt="Papi wuz heer graffiti" class="hero-bg">
-  <div class="hero-content">
-    <img src="Logo2.png" alt="Papi" style="height:110px; width:110px; object-fit:cover; border-radius:50%; border:4px solid #c0782a; box-shadow:0 4px 20px rgba(0,0,0,0.5); margin-bottom:0.8rem;">
-    <h1>Papi Wuz Heer</h1>
-    <p class="tagline">A meticulous field journal of territorial accomplishments by Papi</p>
-    <a href="papi-art.html" style="display:inline-block; margin-top:0.8rem; color:#f5c97a; font-size:0.9rem; text-decoration:none; border:1px solid #f5c97a; border-radius:20px; padding:0.2rem 0.9rem; opacity:0.85;">🎨 Papi Art Gallery →</a>
-    <a href="fanmail.html" style="display:inline-block; margin-top:0.5rem; color:#f5c97a; font-size:0.9rem; text-decoration:none; border:1px solid #f5c97a; border-radius:20px; padding:0.2rem 0.9rem; opacity:0.85;">💌 Fan Mail →</a>
+{% for post in site.posts %}
+<div class="post">
+  <div class="meta">
+    {{ post.date | date: "%A, %B %-d, %Y" }} · {{ post.time }} · {{ post.location }}
   </div>
-</header>
+  <h2><span class="category-icon">{{ post.icon }}</span>{{ post.title }}</h2>
 
-<main>
-  <div class="paw-divider">🐾 🐾 🐾 🐾 🐾</div>
+  {% if post.image %}
+  <picture>
+    {% if post.image_avif %}<source type="image/avif" srcset="{{ post.image_avif | relative_url }}">{% endif %}
+    <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}">
+  </picture>
+  {% endif %}
 
-  <div class="stats-bar">
-    <div><span>47</span>Total Marks</div>
-    <div><span>12</span>Object Types</div>
-    <div><span>3</span>Neighborhoods</div>
+  <p>{{ post.excerpt | strip_html }}</p>
+
+  {% if post.targets %}
+  <div style="margin-top:0.8rem;">
+    {% for target in post.targets %}
+    <span class="target">{{ target }}</span>
+    {% endfor %}
   </div>
+  {% endif %}
 
-  <!-- Post 1 -->
-  <div class="post">
-    <div class="badge">🌿 Flora</div>
-    <h2><span class="category-icon">🌵</span>The Terracotta Planter on Mrs. Henderson's Stoop</h2>
-    <div class="meta">Tuesday, May 12, 2026 · 7:14 AM · Ballard</div>
-    <p>A truly classic specimen. The planter is large, sun-warmed, and positioned at the perfect height for a medium-sized dog of my stature. The dead succulent inside added a certain poetic resonance — I too have faced the desert. I have prevailed.</p>
-    <div style="position:relative; display:inline-block; margin:0.8rem 0;">
-      <picture>
-        <source type="image/avif" srcset="deadsucculent.avif">
-        <img src="deadsucculent.png" alt="Dead succulent in terracotta planter" style="width:100%; max-width:340px; border-radius:10px; display:block;">
-      </picture>
-    </div>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🪴 terracotta planter</span>
-      <span class="target">💀 dead succulent</span>
-    </div>
-    <div class="rating">⭐⭐⭐⭐⭐</div>
-    <blockquote>"Would mark again. 10/10 drainage holes."</blockquote>
-  </div>
+  {% if post.rating %}
+  <div class="rating">{% for i in (1..post.rating) %}⭐{% endfor %}</div>
+  {% endif %}
 
-  <!-- Post 2 -->
-  <div class="post">
-    <div class="badge">🪨 Hardscape</div>
-    <h2><span class="category-icon">🌳</span>The Legendary Tree Stump</h2>
-    <div class="meta">Wednesday, May 13, 2026 · 8:02 AM · Ballard</div>
-    <p>This is not just a tree stump. This is a monument. At least six other dogs have left their signatures here, and I have added mine — twice, because once was not enough to fully communicate the depth of my feelings. Ancient. Mossy. Perfect.</p>
-    <div style="position:relative; display:inline-block; margin:0.8rem 0;">
-      <picture>
-        <source type="image/avif" srcset="treestump.avif">
-        <img src="treestump.png" alt="Mossy tree stump" style="width:100%; max-width:340px; border-radius:10px; display:block;">
-      </picture>
-    </div>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🌳 tree stump</span>
-      <span class="target">🌿 moss</span>
-    </div>
-    <div class="rating">⭐⭐⭐⭐⭐</div>
-    <blockquote>"The Sistine Chapel of pee spots. I wept."</blockquote>
-  </div>
+  {% if post.quote %}
+  <blockquote>"{{ post.quote }}"</blockquote>
+  {% endif %}
 
-  <!-- Post 3 -->
-  <div class="post">
-    <div class="badge">🦆 Ornament</div>
-    <h2><span class="category-icon">🦢</span>Concrete Garden Goose (Seasonal Outfit: Raincoat)</h2>
-    <div class="meta">Friday, May 15, 2026 · 6:58 AM · Ballard</div>
-    <p>She was dressed for the weather. I respected that. The goose stands approximately 14 inches tall, wears a yellow plastic raincoat, and has been staring at the sidewalk for at least three years. I felt she deserved acknowledgment. I provided it.</p>
-    <div style="position:relative; display:inline-block; margin:0.8rem 0;">
-      <picture>
-        <source type="image/avif" srcset="goose.avif">
-        <img src="goose.png" alt="Concrete garden goose ornament in a raincoat" style="width:100%; max-width:340px; border-radius:10px; display:block;">
-      </picture>
-    </div>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🦢 yard ornament (goose)</span>
-      <span class="target">🧥 tiny raincoat</span>
-    </div>
-    <div class="rating">⭐⭐⭐⭐</div>
-    <blockquote>"A legend recognizes a legend."</blockquote>
-  </div>
+  <a href="{{ post.url | relative_url }}" class="post-link">Read entry →</a>
+</div>
+{% endfor %}
 
-  <!-- Post 4 -->
-  <div class="post">
-    <div class="badge">🌱 Shrub</div>
-    <h2><span class="category-icon">🌿</span>Overgrown Rosemary Bush, Untamed and Worthy</h2>
-    <div class="meta">Saturday, May 16, 2026 · 7:30 AM · Ballard</div>
-    <p>Fragrant. Sprawling. Completely unaware of property lines. The rosemary had crept halfway onto the sidewalk, which I interpreted as an open invitation. The smell afterward was confusing but not unpleasant. I sneezed three times. Worth it.</p>
-    <div style="position:relative; display:inline-block; margin:0.8rem 0;">
-      <img src="rosemary.png" alt="Overgrown rosemary bush" style="width:100%; max-width:340px; border-radius:10px; display:block;">
-    </div>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🌿 rosemary bush</span>
-      <span class="target">🍕 pizza-adjacent location</span>
-    </div>
-    <div class="rating">⭐⭐⭐⭐</div>
-    <blockquote>"Aromatic. Chaotic. 4 stars."</blockquote>
-  </div>
-
-  <!-- Post 5 -->
-  <div class="post">
-    <div class="badge">🪨 Structure</div>
-    <h2><span class="category-icon">🧱</span>Decorative Landscape Boulder (Fake)</h2>
-    <div class="meta">Monday, May 18, 2026 · 7:47 AM · Ballard</div>
-    <p>I approached with reverence. Only upon closer inspection did I realize it was hollow plastic. This did not diminish my resolve. If anything, the deception made it more deserving. You pretend to be a rock, I pretend not to notice the HOA sign. We both move on.</p>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🪨 fake boulder</span>
-      <span class="target">🏡 HOA territory</span>
-    </div>
-    <div class="rating">⭐⭐⭐</div>
-    <blockquote>"Points deducted for the deception. Still marked."</blockquote>
-  </div>
-
-  <!-- Post 6 -->
-  <div class="post">
-    <div class="badge">🌼 Garden</div>
-    <h2><span class="category-icon">🌸</span>The Petunia Bed Along the Chain-Link Fence</h2>
-    <div class="meta">Wednesday, May 20, 2026 · 6:45 AM · Ballard</div>
-    <p>Pink. Purple. Modest. They line the fence like a chorus, heads bobbing in the breeze. I chose the corner petunia — the anchor of the arrangement, the load-bearing flower. I hope it understood the honor.</p>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🌸 petunias</span>
-      <span class="target">⛓️ chain-link fence post</span>
-    </div>
-    <div class="rating">⭐⭐⭐⭐</div>
-    <blockquote>"Delicate, but they can handle it."</blockquote>
-  </div>
-
-  <!-- Post 7 -->
-  <div class="post">
-    <div class="badge">🏆 Legendary</div>
-    <h2><span class="category-icon">🗿</span>Concrete Frog Playing a Tiny Banjo</h2>
-    <div class="meta">Saturday, May 23, 2026 · 8:10 AM · Ballard</div>
-    <div style="position:relative; display:inline-block; margin:0.8rem 0;">
-      <picture>
-        <source type="image/avif" srcset="frog_papi.avif">
-        <img src="frog_papi.png" alt="Concrete frog garden ornament" style="width:100%; max-width:340px; border-radius:10px; display:block;">
-      </picture>
-    </div>
-    <p>I don't know what to say. He was playing a banjo. A tiny, concrete banjo. Sitting in a bed of impatiens, completely at peace. I stood there for a moment before acting — not out of hesitation, but out of sheer respect for the craft. Then I marked him anyway. Art must be acknowledged.</p>
-    <div style="margin-top:0.8rem;">
-      <span class="target">🐸 concrete frog</span>
-      <span class="target">🪕 tiny banjo</span>
-      <span class="target">🌺 impatiens bed</span>
-    </div>
-    <div class="rating">⭐⭐⭐⭐⭐</div>
-    <blockquote>"The greatest yard ornament I have ever encountered. I will return."</blockquote>
-  </div>
-
-  <div class="paw-divider">🐾 🐾 🐾 🐾 🐾</div>
-
-</main>
-
-<footer>
-  <p><strong>Papi Wuz Heer</strong> · Est. 2022 · All territories claimed, all opinions final</p>
-  <p style="margin-top:0.4rem;">Transcribed by a human who really should have brought more bags.</p>
-</footer>
-
-</body>
-</html>
+<div class="paw-divider">🐾 🐾 🐾 🐾 🐾</div>

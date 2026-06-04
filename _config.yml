@@ -1,0 +1,8 @@
+title: Papi Wuz Heer
+description: A meticulous field journal of territorial accomplishments by Papi
+baseurl: "/papiwuzhere"
+url: "https://tofutest.github.io"
+permalink: /entries/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
