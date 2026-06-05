@@ -297,6 +297,23 @@ footer strong { color: #c0782a; }
   background: #a35a19;
 }
 
+/* Video embed */
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  margin: 0.8rem 0;
+}
+
+.video-embed iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
 /* Fan mail */
 
 .fanmail-entry {
