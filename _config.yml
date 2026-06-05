@@ -8,6 +8,8 @@ collections:
   artworks:
     output: true
     permalink: /art/:name/
+  fanmail:
+    output: false
 
 exclude:
   - .venv/
@@ -15,6 +17,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - "*.py"
+  - readme.html
 
 plugins:
   - jekyll-feed

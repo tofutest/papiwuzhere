@@ -297,6 +297,41 @@ footer strong { color: #c0782a; }
   background: #a35a19;
 }
 
+/* Fan mail */
+
+.fanmail-entry {
+  background: white;
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid #c0782a;
+  text-align: center;
+}
+
+.fanmail-entry .fanmail-date {
+  font-size: 0.82rem;
+  color: #999;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.fanmail-entry img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.fanmail-entry p {
+  line-height: 1.7;
+  font-size: 1.07rem;
+  color: #5a3e28;
+  font-style: italic;
+}
+
 /* Art page header variant */
 .art-header-content {
   position: absolute;
