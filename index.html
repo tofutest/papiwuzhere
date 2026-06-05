@@ -17,33 +17,8 @@ title: Papi Wuz Heer 🐾
     {{ post.date | date: "%A, %B %-d, %Y" }} · {{ post.time }} · {{ post.location }}
   </div>
   <h2><span class="category-icon">{{ post.icon }}</span>{{ post.title }}</h2>
-
-  {% if post.image %}
-  <picture>
-    {% if post.image_avif %}<source type="image/avif" srcset="{{ post.image_avif | relative_url }}">{% endif %}
-    <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}">
-  </picture>
-  {% endif %}
-
-  <p>{{ post.excerpt | strip_html }}</p>
-
-  {% if post.targets %}
-  <div style="margin-top:0.8rem;">
-    {% for target in post.targets %}
-    <span class="target">{{ target }}</span>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-  {% if post.rating %}
-  <div class="rating">{% for i in (1..post.rating) %}⭐{% endfor %}</div>
-  {% endif %}
-
-  {% if post.quote %}
-  <blockquote>"{{ post.quote }}"</blockquote>
-  {% endif %}
-
-  <a href="{{ post.url | relative_url }}" class="post-link">Read entry →</a>
+  <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  <a href="{{ post.url | relative_url }}" class="post-link">Read full entry →</a>
 </div>
 {% endfor %}
 

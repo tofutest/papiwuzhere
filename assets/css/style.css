@@ -184,6 +184,154 @@ footer {
 
 footer strong { color: #c0782a; }
 
+/* Art page */
+
+.artist-statement {
+  background: white;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid #c0782a;
+}
+
+.artist-statement h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c0782a;
+  margin-bottom: 1rem;
+}
+
+.artist-statement p {
+  line-height: 1.8;
+  font-style: italic;
+  color: #5a3e28;
+  font-size: 1.05rem;
+}
+
+.artwork {
+  background: white;
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid #c0782a;
+}
+
+.artwork .badge {
+  display: inline-block;
+  background: #fdf0d5;
+  border: 2px solid #c0782a;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.78rem;
+  color: #8b4513;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.artwork h2 {
+  font-size: 1.5rem;
+  color: #4a2c0a;
+  margin-bottom: 0.3rem;
+}
+
+.artwork .meta {
+  font-size: 0.82rem;
+  color: #999;
+  margin-bottom: 1.2rem;
+}
+
+.artwork img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  display: block;
+  margin: 1rem 0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.artwork p {
+  line-height: 1.7;
+  font-size: 1.07rem;
+  margin-bottom: 0.8rem;
+}
+
+.artwork blockquote {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: #fef9ee;
+  border-left: 3px solid #e0c070;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #7a5c30;
+  border-radius: 0 8px 8px 0;
+}
+
+.provenance {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: #aaa;
+}
+
+.provenance strong { color: #c0782a; }
+
+.buy-button {
+  display: inline-block;
+  margin: 1rem 0 1.5rem;
+  background: #c0782a;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.16);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.buy-button:hover {
+  transform: translateY(-2px);
+  background: #a35a19;
+}
+
+/* Art page header variant */
+.art-header-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+header.art-header {
+  min-height: 320px;
+}
+
+header.art-header .hero-bg {
+  height: 100%;
+  min-height: 320px;
+  max-height: 340px;
+}
+
+.nav-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #f5c97a;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid #f5c97a;
+  border-radius: 20px;
+  padding: 0.2rem 0.9rem;
+  opacity: 0.85;
+}
+
+.nav-link:hover { opacity: 1; }
+
 @media (max-width: 640px) {
   header .hero-content {
     padding: 1.2rem 0.8rem 1rem;

@@ -4,5 +4,17 @@ baseurl: "/papiwuzhere"
 url: "https://tofutest.github.io"
 permalink: /entries/:year/:month/:day/:title/
 
+collections:
+  artworks:
+    output: true
+    permalink: /art/:name/
+
+exclude:
+  - .venv/
+  - backup/
+  - Gemfile
+  - Gemfile.lock
+  - "*.py"
+
 plugins:
   - jekyll-feed

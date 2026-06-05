@@ -1,0 +1,33 @@
+---
+layout: art
+---
+
+<div class="paw-divider">🎨 🐾 🎨 🐾 🎨</div>
+
+<div class="artwork">
+  <div class="badge">{{ page.badge }}</div>
+  <h2>{{ page.title }}</h2>
+  <div class="meta">{{ page.meta }}</div>
+
+  {% if page.image %}
+  <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+  {% endif %}
+
+  <div style="text-align:center;">
+    <a href="{{ '/purchase.html' | relative_url }}" class="buy-button">Buy Print</a>
+  </div>
+
+  {{ content }}
+
+  {% if page.quote %}
+  <blockquote>"{{ page.quote }}" — Papi</blockquote>
+  {% endif %}
+
+  {% if page.provenance %}
+  <div class="provenance">{{ page.provenance }}</div>
+  {% endif %}
+
+  <a href="{{ '/papi-art.html' | relative_url }}" class="post-link">← Back to Gallery</a>
+</div>
+
+<div class="paw-divider">🎨 🐾 🎨 🐾 🎨</div>
